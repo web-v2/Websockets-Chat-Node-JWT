@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Sing In || Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body class="container">
+   
+   <div class="row mt-5">
+      <div class="col-sm-6">
+         <h1>Google Sing-In</h1>
+         <hr>
+         <div class="g-signin2" data-onsuccess="onSignIn"></div>        
+      </div>
+      <div class="col-sm-6">
+         <h1>Login Manual</h1>
+         <hr>
+         <form class="d-grid">
+            <input type="text" name="correo" id="correo" placeholder="email" class="form-control mb-2">
+            <input type="password" name="password" id="password" placeholder="password" class="form-control mb-2">
+            <button type="submit" class="btn btn-primary">Ingresar</button>
+         </form>
+      </div>   
+   </div>
+
+
+    <div id="g_id_onload"
+         data-client_id="448996714239-7phru5shtddjvftjuu1d3de332b9fnke.apps.googleusercontent.com"         
+         data-auto_prompt="false"
+         data-callback="handleCredentialResponse">
+      </div>
+      <div class="g_id_signin"
+         data-type="standard"
+         data-size="large"
+         data-theme="outline"
+         data-text="sign_in_with"
+         data-shape="rectangular"
+         data-logo_alignment="left">
+      </div>
+      <button id="google_singout" class="btn btn-danger">Cerrar Sesión</button>
+      <script src="https://accounts.google.com/gsi/client" async defer></script>
+      <script src="./js/auth.js"></script>     
+</body>
+</html>
